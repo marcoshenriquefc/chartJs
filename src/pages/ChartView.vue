@@ -43,6 +43,12 @@ export default defineComponent({
             // DADOS PARA MONTAR O GRÁFICO
             datasets: [{
                 label: `Casos de covid em ${item.data.state}`,                  // TITULO DA TABELA
+                borderColor: 'rgba(255, 255, 255, 0.5)',                        // cor da linha
+                borderWidth: .8,
+                pointBorderWidth: 0,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                lineTension: 0,
                 backgroundColor: ['#f87979', '#36a2eb', '#ffce56', '#4bc0c0'],  // CORES DE CADA COLUNA
                 data: [item.data.cases, item.data.deaths, item.data.suspects, item.data.refuses]  // DATA RECEBIDO DA API
             }]
