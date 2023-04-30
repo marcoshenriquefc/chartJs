@@ -4,6 +4,10 @@
             v-if="dataObj.datasets"
             :chartData="dataObj"
         />
+        <GraficLine
+            v-if="dataObj.datasets"
+            :chartData="dataObj"
+        />
     </div>
 </template>
 
@@ -15,11 +19,13 @@ import { defineComponent } from 'vue';
 
 import CovidService from '../services/covid';
 import GraficData from '../components/GraficData.vue';
+import GraficLine from '../components/GraficLine.vue';
 
 export default defineComponent({
     name: 'ChartView',
     components: {
         GraficData,
+        GraficLine
     },
     data(){
         return {
